@@ -13,7 +13,7 @@ while True:
     option = input("Please enter choice:  ").strip()
     
     if option == '1':
-        name_cust = input("Please enter the customers name:  ")
+        name_cust = input("Please enter the customers name:  ").strip()
         if name_cust:
             my_queue.append(name_cust)
         else:
@@ -25,6 +25,18 @@ while True:
             print(f"{cust_removed} has been served!!")
         else:
             print("No customer to serve in queue as the queue is empty!")
+    elif option == '3':
+        if my_queue:
+            print(f"The next customer to be served in the queue is {my_queue[0]}")
+        else:
+            print("No next customer as the queue is empty!")    
+    elif option == '4':
+        print(f"The queue has total customers waiting : {len(my_queue)}  ") 
+        print(f"The queue has these customers currently waiting: {my_queue}  ")      
+    elif option == '5':
+        break
+    else:
+        print("Please enter a valid option")      
                              
     
     
